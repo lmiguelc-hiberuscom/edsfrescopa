@@ -1,0 +1,66 @@
+{
+  "definitions": [
+    {
+      "title": "Stats",
+      "id": "stats",
+      "model": "stats",
+      "filter": "stats",
+      "plugins": {
+        "da": {
+          "rows": 1,
+          "columns": 3
+        }
+      }
+    },
+    {
+      "title": "Stat",
+      "id": "stat",
+      "model": "stat",
+      "plugins": {
+        "da": {
+          "rows": 1,
+          "columns": 3,
+          "fields": [
+            { "name": "value", "selector": "div:nth-child(1)" },
+            { "name": "label", "selector": "div:nth-child(2)" },
+            { "name": "description", "selector": "div:nth-child(3)" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "stat",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "value",
+          "label": "Value (e.g. 98%, 1,200+, $5M)",
+          "required": true
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "label",
+          "label": "Label"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "stats",
+      "components": [
+        "stat"
+      ]
+    }
+  ]
+}

@@ -18,6 +18,7 @@
       "hero",
       "image",
       "quote",
+      "stats",
       "search",
       "tabs",
       "table",
@@ -59,6 +60,12 @@
     "components": [
       "text",
       "image"
+    ]
+  },
+  {
+    "id": "stats",
+    "components": [
+      "stat"
     ]
   },
   {
